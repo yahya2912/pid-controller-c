@@ -1,8 +1,7 @@
 # PID Controller in C
 
 A lightweight PID controller implementation in C, simulating a temperature
-control system. Built as a learning project to understand closed-loop control
-systems from theory to code.
+control system.
 
 ## Theory
 
@@ -42,9 +41,3 @@ make
 | Kp | Speed of response. Too high = oscillation. |
 | Ki | Eliminates steady-state error. Too high = overshoot. |
 | Kd | Reduces overshoot. Too high = instability. |
-
-## Next Steps
-
-- Unit tests in test/test_pid.c
-- Port to STM32 / Arduino
-- Second-order plant model
