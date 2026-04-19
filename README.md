@@ -16,12 +16,15 @@ and a measured value (measurement) using three terms:
 Output: `y = Kp*e + Ki*∑e*dt + Kd*(de/dt)`
 
 ## Project Structure
+
+```
 pid-controller-c/
 ├── include/pid.h       # PID struct and function declarations
 ├── src/pid.c           # PID implementation (init, update, anti-windup)
 ├── src/main.c          # Temperature simulation loop
 ├── test/test_pid.c     # Unit tests (coming soon)
 └── CMakeLists.txt      # Build configuration
+```
 
 ## Build & Run
 
