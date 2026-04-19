@@ -66,4 +66,3 @@ make pid_gui
 | Kp | Speed of response. Too high = oscillation. |
 | Ki | Eliminates steady-state error. Too high = overshoot. |
 | Kd | Reduces overshoot. Too high = instability. |
-EOF
