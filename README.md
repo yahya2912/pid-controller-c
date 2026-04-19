@@ -21,12 +21,23 @@ pid-controller-c/
 ├── include/pid.h       # PID struct and function declarations
 ├── src/pid.c           # PID implementation (init, update, anti-windup)
 ├── src/main.c          # Temperature simulation loop
+├── src/gui.c           # GTK3 desktop UI with live response curve
 ├── test/test_pid.c     # Unit tests (coming soon)
 └── CMakeLists.txt      # Build configuration
 ```
 
+## Dependencies
+- GCC
+- CMake 3.16+
+- GTK3 (for the GUI)
+
+```bash
+sudo apt install cmake gcc libgtk-3-dev
+```
+
 ## Build & Run
 
+**CLI simulation:**
 ```bash
 mkdir build && cd build
 cmake ..
@@ -34,10 +45,25 @@ make
 ./pid_sim
 ```
 
-## Tuning
+**GTK GUI:**
+```bash
+cd build
+make pid_gui
+./pid_gui
+```
 
+## GUI Usage
+1. Set **Kp**, **Ki**, **Kd** using the input fields
+2. Set a **Setpoint** (target value)
+3. Click **Run Simulation**
+4. The response curve shows:
+   - 🟢 Green line — Setpoint (target)
+   - 🔵 Blue curve — Process Variable (system response)
+
+## Tuning
 | Parameter | Effect |
 |-----------|--------|
 | Kp | Speed of response. Too high = oscillation. |
 | Ki | Eliminates steady-state error. Too high = overshoot. |
 | Kd | Reduces overshoot. Too high = instability. |
+EOF
